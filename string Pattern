@@ -1,0 +1,50 @@
+
+package javaapplication1;
+import java.io.*;
+import java.util.*;
+
+/**
+ *
+ * @author Skeleton
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+		String str=sc.next();
+		int k=str.length()/2;
+		int l=str.length()-1;
+		for(int i=0;i<str.length();i++)
+		{
+			int temp=k;
+			for(int j=0;j<str.length();j++)
+			{
+				if(j==l)
+				{
+					while(j<str.length())
+					{
+						System.out.print(str.charAt(temp));
+						temp++;
+                                                j++;
+					}
+                                        
+				}
+				else
+                                {
+				System.out.print(" ");
+                                }
+				if(temp==str.length())
+                                {
+                                    k=0;
+                                }
+				
+			}
+			System.out.println();
+			l--;
+                }               
+    }
+    
+}
